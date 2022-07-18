@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class service 
 {
     private repo Repo;
@@ -16,9 +18,15 @@ public class service
     }
 
     // adauga la o pozitie data
-    public void add(int scor,int poz)
+    public void add(int poz,int scor)
     {
         concurent x = new concurent(scor, id_count);
-        Repo.add(poz,x);
+        Repo.add(poz, x);
+    }
+
+    // returns the list
+    public ArrayList<concurent> get_list()
+    {
+        return this.Repo.get_list();
     }
 }
